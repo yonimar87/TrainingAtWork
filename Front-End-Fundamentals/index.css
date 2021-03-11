@@ -2,8 +2,8 @@
     margin-right: auto; 
     margin-left:  auto; 
     max-width: 960px; 
-    padding-right: 10px; 
-    padding-left:  10px; 
+    /* padding-right: 10px; 
+    padding-left:  10px;  */
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
@@ -12,8 +12,47 @@
   }
 
 .individualCard {
-    margin-bottom: 20px;
-    padding: 2%;
+    width: 30rem;
+    margin: 20px;
+    /* padding: 2%; */
     border: ridge 2px;
     border-radius: 50px;
+    display: flex; 
+    flex-direction: column; 
+    /* justify-content: center;  */
+    background-clip: border-box;
+    text-align: center;
+
   }
+
+.topCardPart {
+    color: white;
+    background-clip: border-box;
+    border-radius: 50px 50px 0 0;
+    padding: 2rem;
+}
+
+.bottomCardPart {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: darkkhaki;
+}
+
+#firstCard {
+    background-color: forestgreen;
+}
+
+#secondCard {
+    background-color: darksalmon;
+}
+
+#thirdCard {
+    background-color: dimgray;
+}
+
+img {
+    max-width: 20%;
+}
