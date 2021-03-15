@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <title>Front End Fundamentals</title>
 </head>
-<body>
-    <div id="container">
+<body id="container">
+    <aside>
+        <figure>
+            <img src="yoni.png" alt="Image of Yoni"> 
+            <figcaption>Yoni Marlow - Coder Extraordinaire</figcaption>
+        </figure>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="#">Learn About Yoni</a>
+                </li>
+                <li>
+                    <a href="#">Previous Tweets</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
-        <div  class="individualCard">
-            <div class="topCardPart" id="firstCard">
-                <h4>I GUESS I MANAGED TO CREATE MY SOCIAL CARD</h4>
-            </div>
+    <main>
+        <div class="individualCard">
+            <h2 class="topCardPart" id="firstCard">I GUESS I MANAGED TO CREATE MY SOCIAL CARD</h2>
             <div class="bottomCardPart">
-                <h5>Learning React?</h5>
+                <h3>Learning React?</h3>
                 <a href="https://reactjs.org/docs/getting-started.html" target="_blank">Click here to keep on learning!</a>
             </div>
         </div>
 
-        <div  class="individualCard">
-            <div class="topCardPart" id="secondCard">
-                <h4>A Bit more about Yoni</h4>
-            </div>
-                <div class="bottomCardPart">
-                    <a href="https://www.linkedin.com/in/yoni-marlow/" target="_blank">
-                        <img src="yoni.png" alt="Image of Yoni"> 
-                    </a>
-            </div>
+        <div class="individualCard">
+            <h2 class="topCardPart" id="secondCard">A Bit more about Yoni</h2>
+            <a href="https://www.linkedin.com/in/yoni-marlow/" target="_blank" class="bottomCardPart">
+                <img id="tweetimg" src="yoni.png" alt="Image of Yoni"> 
+            </a>
         </div>
 
-        <div  class="individualCard"> 
-            <div class="topCardPart" id="thirdCard">
-                <h4>I GUESS I MANAGED TO CREATE MY SOCIAL CARD</h4>
-            </div>
+        <div class="individualCard"> 
+            <h2 class="topCardPart" id="thirdCard">I GUESS I MANAGED TO CREATE MY SOCIAL CARD</h2>
             <div class="bottomCardPart">
-                <h5>Learning React?</h5>
+                <h3>Learning React?</h3>
                 <a href="https://reactjs.org/docs/getting-started.html" target="_blank">Click here to keep on learning!</a>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>
