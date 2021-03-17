@@ -1,0 +1,24 @@
+.calculator {
+    border: 2px grey;
+    max-width: 208px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items:stretch;
+}
+
+.topCalc {
+    background-color: #2e2d2d;
+    text-align: right;
+    font-size: 50px;
+    font-weight: 300;
+    color: white;
+    width: 100%;
+}
+
+.buttonCalc{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    /* width: 100%; */
+}
