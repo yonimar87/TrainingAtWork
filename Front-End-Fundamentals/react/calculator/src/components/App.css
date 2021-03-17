@@ -1,0 +1,19 @@
+#calculator {
+  background-color: grey;
+  color: white;
+  display: flex;
+  border-radius: 1rem;
+  flex-direction: column;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+li {
+  border: solid black;
+  padding: 5px;
+  margin: auto;
+}
