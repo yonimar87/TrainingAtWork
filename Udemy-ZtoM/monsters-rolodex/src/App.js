@@ -1,13 +1,23 @@
 import React, {Component} from 'react'
+import {SearchBox} from './components/search-box/search-box.component.jsx'
+import {CardList} from './components/card-list/card-list.component.jsx'
 import './App.css';
 
 class App extends Component {
+
   constructor() {
     super ();
 
     this.state = {
-      monsters: []
+      monsters: [],
+      searchField: ''
     }
+
+    // this.handleChange = this.handleChange.bind(this); //this isnt needed because arrow function in handleChange
+  }
+
+  handleChange = (e) => { //arrow function binds this within the function
+    this.setState({searchField: e.target.value});
   }
 
   componentDidMount() {
@@ -17,11 +27,18 @@ class App extends Component {
   }
 
   render () {
+
+    const { monsters, searchField} = this.state; // this is the equivalent of const monsters = this.state.monsters, etc. 
+    const filteredMonsters = monsters.filter(monster => 
+      monster.name.toLowerCase().includes(searchField.toLowerCase()))
     return (
       <div className="App">
-        {
-          this.state.monsters.map(monster => <h1 key={monster.id}> {monster.name}</h1>)
-        }
+        <h1>Monsters Rolodex</h1>
+        <SearchBox 
+        onChange={this.handleChange}
+        placeholder='search monsters' 
+        />
+        <CardList monsters={filteredMonsters} />
       </div>
     )
   }
