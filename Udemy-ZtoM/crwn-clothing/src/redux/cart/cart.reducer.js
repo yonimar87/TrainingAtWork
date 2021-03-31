@@ -13,13 +13,11 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         ...state,
         hidden: !state.hidden,
       };
-
     case CartActionTypes.ADD_ITEM:
       return {
         ...state,
         cartItems: addItemToCart(state.cartItems, action.payload),
       };
-
     case CartActionTypes.REMOVE_ITEM:
       return {
         ...state,
@@ -29,9 +27,13 @@ const cartReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         cartItems: state.cartItems.filter(
-          // filter yeilds anything true. if anything doesn't match, return true.
           (cartItem) => cartItem.id !== action.payload.id
         ),
+      };
+    case CartActionTypes.CLEAR_CART:
+      return {
+        ...state,
+        cartItems: [],
       };
     default:
       return state;
